@@ -8,7 +8,7 @@ import Lowerheader from "./LowerHeader";
 
 function Header() {
 	return (
-		<>
+		<div>
 			<section>
 				<div className={classes.header_container}>
 					{/* Logo section */}
@@ -68,7 +68,7 @@ function Header() {
 				</div>
 			</section>
 			<Lowerheader />
-		</>
+		</div>
 	);
 }
 
