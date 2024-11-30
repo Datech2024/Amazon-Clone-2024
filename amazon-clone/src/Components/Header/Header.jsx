@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import classes from "./Header.module.css";
 import { SlLocationPin } from "react-icons/sl";
 import { BsSearch } from "react-icons/bs";
@@ -8,11 +8,9 @@ import Lowerheader from "./LowerHeader";
 import { DataContext } from "../DataProvider/DataProvider";
 
 function Header() {
+	const [{ basket }, dispatch] = useContext(DataContext);
 
-const [{basket}, dispatch] = useContext(DataContext)
-
-// console.log()
-
+	// console.log()
 
 	return (
 		<section className={classes.fixed}>

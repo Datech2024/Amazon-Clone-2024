@@ -9,7 +9,7 @@ function Product() {
 	const [isLoading, setIsLoading] = useState(false);
 
 	useEffect(() => {
-		setIsLoading(true)
+		setIsLoading(true);
 		axios
 			.get("https://fakestoreapi.com/products")
 			.then((res) => {
@@ -30,7 +30,11 @@ function Product() {
 				<section className={classes.products_container}>
 					{products.map((singleProduct) => {
 						return (
-							<ProductCard product={singleProduct} key={singleProduct.id} />
+							<ProductCard
+								product={singleProduct}
+								key={singleProduct.id}
+								renderAdd={true}
+							/>
 						);
 					})}
 				</section>
