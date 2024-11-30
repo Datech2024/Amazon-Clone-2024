@@ -15,7 +15,7 @@ const [{basket}, dispatch] = useContext(DataContext)
 
 
 	return (
-		<div>
+		<section className={classes.fixed}>
 			<section>
 				<div className={classes.header_container}>
 					{/* Logo section */}
@@ -75,7 +75,7 @@ const [{basket}, dispatch] = useContext(DataContext)
 				</div>
 			</section>
 			<Lowerheader />
-		</div>
+		</section>
 	);
 }
 
