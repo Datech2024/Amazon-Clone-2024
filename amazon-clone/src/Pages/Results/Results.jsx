@@ -3,8 +3,9 @@ import classes from "./Results.module.css";
 import LayOut from "../../Components/LayOut/LayOut";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import { productUrl } from "../../Api/endPoints";
 import ProductCard from "../../Components/Product/ProductCard";
+import { productUrl } from "../../Api/EndPoints.jsX";
+
 
 function Results() {
 	const [results, setResults] = useState([]);
