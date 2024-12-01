@@ -5,7 +5,7 @@
 	align-items: center;
 }
 .login img {
-	margin: 15px auto ;
+	margin: 15px auto;
 	object-fit: contain;
 	width: 120px;
 }
@@ -53,7 +53,7 @@
 	cursor: pointer;
 }
 .login__signInButton:hover {
-    background-color: var(--primary-shade);
+	background-color: var(--primary-shade);
 }
 .login__container p {
 	margin: 10px 0;
@@ -68,5 +68,5 @@
 	cursor: pointer;
 }
 .login__registerButton:hover {
-    background-color: lightgrey;
+	background-color: lightgrey;
 }
