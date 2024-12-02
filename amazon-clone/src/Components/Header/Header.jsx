@@ -6,9 +6,10 @@ import { BsSearch } from "react-icons/bs";
 import { BiCart } from "react-icons/bi";
 import Lowerheader from "./LowerHeader";
 import { DataContext } from "../DataProvider/DataProvider";
+import { auth } from "../../Utility/firebase";
 
 function Header() {
-	const [{ basket }, dispatch] = useContext(DataContext);
+	const [{ user, basket }, dispatch] = useContext(DataContext);
 
 	// console.log()
 
@@ -46,7 +47,7 @@ function Header() {
 							<option value="">All</option>
 						</select>
 						<input type="text" name="" id="" placeholder="Search Amazon" />
-						<BsSearch size={25} />
+						<BsSearch size={38} />
 					</div>
 					{/* other section*/}
 					<div className={classes.order_container}>
@@ -59,11 +60,20 @@ function Header() {
 								<option value="">EN</option>
 							</select>
 						</Link>
-						<Link to="/auth" className={classes.account}>
-							<p>Hellow,sign in</p>
-							<select name="" id="">
-								<option value="">Account & Lists</option>
-							</select>
+						<Link to={!user && "/auth"} className={classes.account}>
+							<div>
+								{user ? (
+									<>
+										<p> Hello {user?.email?.split("@")[0]} </p>
+										<span onClick={() => auth.signOut()}> Sign Out</span>
+									</>
+								) : (
+									<>
+										<p>Hello,sign in</p>
+										<span>Account & Lists</span>
+									</>
+								)}
+							</div>
 						</Link>
 						<Link to="/orders">
 							<p>Returns</p>
