@@ -10,14 +10,14 @@
 .container div:not(.subtotal) {
     height: auto !important;
 }
-.cart_container {
+.cart__container {
 	padding: 20px;
 }
-.cart_container h1,
-.cart_container h3 {
+.cart__container h1,
+.cart__container h3 {
 	padding: 10px;
 }
-.cart_container hr {
+.cart__container hr {
 	margin: 10px;
 }
 .cart_product {

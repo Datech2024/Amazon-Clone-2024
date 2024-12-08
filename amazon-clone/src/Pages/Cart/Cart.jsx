@@ -31,14 +31,14 @@ function Cart() {
 	return (
 		<LayOut>
 			<section className={classes.container}>
-				<div className={classes.cart_container}>
+				<div className={classes.cart__container}>
 					<h1>Hello</h1>
 					<h3>Your shoping basket</h3>
 					<hr />
 					{basket.length == 0 ? (
 						<p>Opps! No item in Your Cart</p>
 					) : (
-						basket.map((item, i) => {
+						basket?.map((item, i) => {
 							return (
 								<section className={classes.cart_product}>
 									<ProductCard
@@ -55,10 +55,10 @@ function Cart() {
 										>
 											<IoIosArrowUp size={15} />
 										</button>
-										<span>{item.amount}</span>
+										<span>{item?.amount}</span>
 										<button
 											className={classes.btn}
-											onClick={() => decrement(item.id)}
+											onClick={() => decrement(item?.id)}
 										>
 											<IoIosArrowDown size={15} />
 										</button>
